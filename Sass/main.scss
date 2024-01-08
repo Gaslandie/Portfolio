@@ -3,6 +3,34 @@
 @use 'functions';
 
 
-body{
+body {
     font-family: variables.$primary-font-size;
+    background-image: url('../img/bg2.png');
+    color: #F8F8F2;
+}
+
+a {
+    color: #00FFFF; /* Cyan pour les liens */
+    text-decoration: none; /* Optionnel : vous pouvez préférer 'underline' */
+    &:hover{
+        color: #ADD8E6; /* Bleu clair lors du survol */
+        text-decoration: underline; /* Souligner lors du survol */
+    }
+    &:focus{
+        color: #ADD8E6; /* Bleu clair lors du survol */
+        text-decoration: underline; /* Souligner lors du survol */
+    }
+}
+
+a:focus {
+    color: #ADD8E6; /* Bleu clair lors du survol */
+    text-decoration: underline; /* Souligner lors du survol */
+}
+
+a:active {
+    color: #FFFF00; /* Jaune pour les liens actifs */
+}
+
+a:visited {
+    color: #00CED1; /* DarkTurquoise pour les liens visités */
 }
