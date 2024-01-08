@@ -1,6 +1,8 @@
 @use 'variables';
 
-@mixin link-styles {
+
+//mixin pour nos liens
+@mixin link-styles-dark {
     color: variables.$link-color;
     text-decoration: none;
   
@@ -19,6 +21,7 @@
     }
   }
   
+  //mixin pour nos listes
   @mixin list-styles {
     list-style: none;
     padding: 0;
@@ -39,6 +42,8 @@
       }
     }
   }
+
+  //mixins pour nos elements nav
   @mixin nav-styles {
     display: flex;
     justify-content: space-around; 

@@ -8,10 +8,45 @@ body {
     color: variables.$text-color;
 }
 
+
+
 // Application des styles de lien
 a {
-    @include mixins.link-styles;
+    @include mixins.link-styles-dark;
 }
+// Application des styles de liste avec Flexbox ailleurs sur le site
+ul {
+    @include mixins.list-styles;
+}
+
+// Utilisation du mixin nav-styles pour les éléments nav
+nav {
+    @include mixins.nav-styles;
+}
+
+
+// Styles spécifiques pour le bouton de changement de thème
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit; // Ou une couleur spécifique
+    transition: color 0.3s ease, transform 0.3s ease; // Transition douce pour color et transform
+    outline: none; // Supprime l'outline par défaut lors du focus
+
+    i {
+        font-size: 1.5em; // Taille de l'icône
+    }
+
+    &:hover, &:focus {
+        color: #ffffff; // Blanc pour un contraste élevé
+        // transform: scale(1.1); // Légèrement plus grand pour attirer l'attention
+        background-color: rgba(255, 255, 255, 0.2); // Fond subtil
+        border-radius: 50%; // Rend le fond circulaire
+        padding: 0.2em; // Espace autour de l'icône
+    }
+}
+
 
 
 
@@ -31,7 +66,7 @@ a {
     }
 
     a {
-        @include mixins.link-styles; // Applique les styles de lien
+        @include mixins.link-styles-dark; // Applique les styles de lien
     }
 
     ul {
@@ -39,12 +74,13 @@ a {
     }
 }
 
-// Application des styles de liste avec Flexbox ailleurs sur le site
-ul {
-    @include mixins.list-styles;
-}
+//pour le theme clair
+.light-theme {
+    background-image:radial-gradient(white,whitesmoke,beige) ;
+    color: black;
 
-// Utilisation du mixin nav-styles pour les éléments nav
-nav {
-    @include mixins.nav-styles;
+    a{
+        color:aqua;
+
+    }
 }
