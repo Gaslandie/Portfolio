@@ -1,36 +1,50 @@
 @use 'variables';
 @use 'mixins';
-@use 'functions';
 
-
+// Styles globaux du body
 body {
-    font-family: variables.$primary-font-size;
-    background-image: url('../img/bg2.png');
-    color: #F8F8F2;
+    font-family: variables.$primary-font;
+    background-image: url(variables.$background-image-path);
+    color: variables.$text-color;
 }
 
+// Application des styles de lien
 a {
-    color: #00FFFF; /* Cyan pour les liens */
-    text-decoration: none; /* Optionnel : vous pouvez préférer 'underline' */
-    &:hover{
-        color: #ADD8E6; /* Bleu clair lors du survol */
-        text-decoration: underline; /* Souligner lors du survol */
+    @include mixins.link-styles;
+}
+
+
+
+.footer {
+    background-color: #333; // Couleur de fond du footer
+    color: #F8F8F2; // Couleur du texte du footer
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    nav {
+        @include mixins.nav-styles; // Applique le mixin nav-styles au nav dans le footer
     }
-    &:focus{
-        color: #ADD8E6; /* Bleu clair lors du survol */
-        text-decoration: underline; /* Souligner lors du survol */
+
+    a {
+        @include mixins.link-styles; // Applique les styles de lien
+    }
+
+    ul {
+        @include mixins.list-styles; // Applique les styles de liste avec Flexbox
     }
 }
 
-a:focus {
-    color: #ADD8E6; /* Bleu clair lors du survol */
-    text-decoration: underline; /* Souligner lors du survol */
+// Application des styles de liste avec Flexbox ailleurs sur le site
+ul {
+    @include mixins.list-styles;
 }
 
-a:active {
-    color: #FFFF00; /* Jaune pour les liens actifs */
-}
-
-a:visited {
-    color: #00CED1; /* DarkTurquoise pour les liens visités */
+// Utilisation du mixin nav-styles pour les éléments nav
+nav {
+    @include mixins.nav-styles;
 }

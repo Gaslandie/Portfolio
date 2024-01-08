@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   font-family: "Montserrat", sans-serif;
   background-image: url("../img/bg2.png");
@@ -6,29 +5,216 @@ body {
 }
 
 a {
-  color: #00FFFF; /* Cyan pour les liens */
-  text-decoration: none; /* Optionnel : vous pouvez préférer 'underline' */
+  color: #00FFFF;
+  text-decoration: none;
 }
-a:hover {
-  color: #ADD8E6; /* Bleu clair lors du survol */
-  text-decoration: underline; /* Souligner lors du survol */
+a:hover, a:focus {
+  color: #32CD32;
+  font-weight: bold;
+  text-decoration: none;
 }
-a:focus {
-  color: #ADD8E6; /* Bleu clair lors du survol */
-  text-decoration: underline; /* Souligner lors du survol */
-}
-
-a:focus {
-  color: #ADD8E6; /* Bleu clair lors du survol */
-  text-decoration: underline; /* Souligner lors du survol */
-}
-
 a:active {
-  color: #FFFF00; /* Jaune pour les liens actifs */
+  color: #228B22;
+}
+a:visited {
+  color: #66CDAA;
 }
 
-a:visited {
-  color: #00CED1; /* DarkTurquoise pour les liens visités */
+.footer {
+  background-color: #333;
+  color: #F8F8F2;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer nav ul li {
+  margin-right: 20px;
+}
+.footer nav ul li:last-child {
+  margin-right: 0;
+}
+.footer nav ul li a {
+  color: #00FFFF;
+  text-decoration: none;
+}
+.footer nav ul li a:hover, .footer nav ul li a:focus {
+  color: #32CD32;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer nav ul li a:active {
+  color: #228B22;
+}
+.footer nav ul li a:visited {
+  color: #66CDAA;
+}
+.footer nav ul li {
+  margin: 0 10px;
+}
+.footer nav ul li a {
+  color: #00FFFF;
+  text-decoration: none;
+}
+.footer nav ul li a:hover, .footer nav ul li a:focus {
+  color: #32CD32;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer nav ul li a:active {
+  color: #228B22;
+}
+.footer nav ul li a:visited {
+  color: #66CDAA;
+}
+.footer a {
+  color: #00FFFF;
+  text-decoration: none;
+}
+.footer a:hover, .footer a:focus {
+  color: #32CD32;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer a:active {
+  color: #228B22;
+}
+.footer a:visited {
+  color: #66CDAA;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer ul li {
+  margin-right: 20px;
+}
+.footer ul li:last-child {
+  margin-right: 0;
+}
+.footer ul li a {
+  color: #00FFFF;
+  text-decoration: none;
+}
+.footer ul li a:hover, .footer ul li a:focus {
+  color: #32CD32;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer ul li a:active {
+  color: #228B22;
+}
+.footer ul li a:visited {
+  color: #66CDAA;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+ul li {
+  margin-right: 20px;
+}
+ul li:last-child {
+  margin-right: 0;
+}
+ul li a {
+  color: #00FFFF;
+  text-decoration: none;
+}
+ul li a:hover, ul li a:focus {
+  color: #32CD32;
+  font-weight: bold;
+  text-decoration: none;
+}
+ul li a:active {
+  color: #228B22;
+}
+ul li a:visited {
+  color: #66CDAA;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+nav ul li {
+  margin-right: 20px;
+}
+nav ul li:last-child {
+  margin-right: 0;
+}
+nav ul li a {
+  color: #00FFFF;
+  text-decoration: none;
+}
+nav ul li a:hover, nav ul li a:focus {
+  color: #32CD32;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav ul li a:active {
+  color: #228B22;
+}
+nav ul li a:visited {
+  color: #66CDAA;
+}
+nav ul li {
+  margin: 0 10px;
+}
+nav ul li a {
+  color: #00FFFF;
+  text-decoration: none;
+}
+nav ul li a:hover, nav ul li a:focus {
+  color: #32CD32;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav ul li a:active {
+  color: #228B22;
+}
+nav ul li a:visited {
+  color: #66CDAA;
 }
 
 /*# sourceMappingURL=main.css.map */

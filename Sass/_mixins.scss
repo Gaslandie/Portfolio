@@ -1,2 +1,64 @@
+@use 'variables';
 
+@mixin link-styles {
+    color: variables.$link-color;
+    text-decoration: none;
+  
+    &:hover, &:focus {
+      color: variables.$link-hover-color;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  
+    &:active {
+      color: variables.$link-active-color;
+    }
+  
+    &:visited {
+      color: variables.$link-visited-color;
+    }
+  }
+  
+  @mixin list-styles {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap; 
+  
+    li {
+      margin-right: 20px; 
+  
+      &:last-child {
+        margin-right: 0; // Supprime la marge droite pour le dernier élément
+      }
+  
+      a {
+        @include link-styles; // Inclut les styles de lien dans les éléments de liste
+      }
+    }
+  }
+  @mixin nav-styles {
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: row;
+    align-items: center; // Centre les éléments verticalement
+    padding: 0;
+    margin: 0;
+  
+    ul {
+      @include list-styles;
+  
+      li {
+        margin: 0 10px; // Ajoutez une marge à gauche et à droite pour chaque élément de liste
+  
+        a {
+          @include link-styles; 
+        }
+      }
+    }
+  }
+  
+  
 

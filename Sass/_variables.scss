@@ -1,5 +1,7 @@
-$primary-font-size:'Montserrat', sans-serif;//font size principale de notre portfolio
- 
-
-
-
+$primary-font: 'Montserrat', sans-serif; // couleur de notre background
+$text-color: #F8F8F2; //couleur du text
+$link-color: #00FFFF; // Cyan pour les liens
+$link-hover-color: #32CD32 ; // Lime Green lors du survol
+$link-active-color: #228B22 ; // Forest Green pour les liens actifs
+$link-visited-color: #66CDAA ; // Medium Aquamarine pour les liens visités
+$background-image-path: '../img/bg2.png'; // l'image de notre background
