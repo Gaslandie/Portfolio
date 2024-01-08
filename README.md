@@ -1,2 +1,2 @@
 # Portfolio
-mise en place de mon portfolio en utilisant html sass et javaScript
+my portfolio using html sass and javaScript
