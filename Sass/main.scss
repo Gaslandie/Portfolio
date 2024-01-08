@@ -2,35 +2,77 @@
 @use 'mixins';
 @use 'functions';
 
-
-body {
-    font-family: variables.$primary-font-size;
-    background-image: url('../img/bg2.png');
-    color: #F8F8F2;
-}
-
-a {
-    color: #00FFFF; /* Cyan pour les liens */
-    text-decoration: none; /* Optionnel : vous pouvez préférer 'underline' */
-    &:hover{
-        color: #ADD8E6; /* Bleu clair lors du survol */
-        text-decoration: underline; /* Souligner lors du survol */
+body.dark-theme{
+    background: variables.$dark-theme-background;
+    color:variables.$dark-theme-text;
+    font-family: variables.$primary-font;
+    //barre de navigation pour theme sombre
+    .container nav{
+    @include mixins.nav-bar; //quelque soit le theme
+    ul{
+        @include mixins.list-style; //quelque soit le theme
+        width:80%;
+        a{
+            @include mixins.dark-link-style;
+        }
     }
-    &:focus{
-        color: #ADD8E6; /* Bleu clair lors du survol */
-        text-decoration: underline; /* Souligner lors du survol */
+   }
+  }
+
+  body.light-theme{
+    background: variables.$light-theme-background;
+    color: variables.$light-theme-text;
+    font-family: variables.$primary-font;
+    .container nav{
+        @include mixins.nav-bar; //quelque soit le theme
+        ul{
+            @include mixins.list-style; //quelque soit le theme
+            width:80%;
+            a{
+                @include mixins.light-link-style;
+            }
+        }
+       }
+}
+
+  //rendre flexible notre boite principale
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+//le bouton icon pour changer le theme de la page
+#theme-toggle {
+    // background: transparent; // Fond transparent
+    border: none; // Pas de bordure
+    cursor: pointer; // Curseur en forme de main
+    padding: 0.5em; 
+    border-radius: 50%; 
+    width: 3rem;
+    height: 3rem;
+
+    i { // Styles pour l'icône FontAwesome pour le thème sombre
+        font-size: 1.5em; // Taille de l'icône
+        color: variables.$icon-color-dark-theme; // Couleur de l'icône pour le thème sombre
     }
-}
 
-a:focus {
-    color: #ADD8E6; /* Bleu clair lors du survol */
-    text-decoration: underline; /* Souligner lors du survol */
-}
-
-a:active {
-    color: #FFFF00; /* Jaune pour les liens actifs */
-}
-
-a:visited {
-    color: #00CED1; /* DarkTurquoise pour les liens visités */
+    &:hover {
+        background: variables.$icon-hover-background-dark-theme; // Fond lors du survol ou du focus pour le thème sombre
+        color: variables.$icon-hover-color-dark-theme; // Couleur de l'icône lors du survol pour le thème sombre
+        outline: none; // Suppression de l'outline par défaut lors du focus
+    }
+    
+    &.light-theme { // Styles pour le thème clair
+        background-color: #add8e6;
+        i {
+            color: variables.$icon-color-light-theme; // Couleur de l'icône pour le thème clair
+        }
+        
+        &:hover {
+            background: variables.$icon-hover-background-light-theme; // Fond lors du survol ou du focus pour le thème clair
+            color: variables.$icon-hover-color-light-theme; // Couleur de l'icône lors du survol pour le thème clair
+        }
+    }
 }

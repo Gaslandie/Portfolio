@@ -1,2 +1,48 @@
+@use 'variables';
 
+
+//quelque soit le theme nos listes
+@mixin list-style{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+//quelque soit le theme nav bar disposition
+@mixin nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+//style pour nos liens theme sombre
+@mixin dark-link-style{
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color:variables.$dark-theme-link;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  &:hover{
+    background-color: variables.$dark-theme-link-hover-bg;
+    color: variables.$dark-theme-link-hover;
+    box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.3); // Ajout de l'ombre portée
+  }
+}
+
+//style pour no liens theme clair
+
+@mixin light-link-style {
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: variables.$light-theme-link;
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+
+  &:hover, &:focus {
+    background-color: variables.$light-theme-link-hover-bg; // Fond au survol
+    color: variables.$light-theme-link-hover; // Couleur de texte au survol
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // Ombre portée plus légère
+  }
+}
 

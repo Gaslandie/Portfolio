@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="Css/main.css">
+    <script src="main.js" defer></script>
 </head>
-<body>
+<body class="dark-theme">
     <!-- grand conteneur -->
     <div class="container">
         <!-- barre de navigation -->
         <header class="navbar">
             <nav>
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/mohamed-gassama-650887183/">LinkedIn</a></li>
-                    <li><a href="https://www.kaggle.com/gaslandien">Kaggle</a></li>
-                    <li><a href="https://github.com/Gaslandie">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/mohamed-gassama-650887183/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.kaggle.com/gaslandien" target="_blank">Kaggle</a></li>
+                    <li><a href="https://github.com/Gaslandie" target="_blank">Github</a></li>
                 </ul>
-                <button id="theme-change">Changer de thème</button>
+                <button id="theme-toggle" aria-label="Changer de thème">
+                    <i class="fas fa-moon"></i> <!-- Icône pour le thème sombre -->
+                </button>
+                
             </nav>
         </header>
 
