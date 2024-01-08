@@ -1,0 +1,8 @@
+@use 'variables';
+@use 'mixins';
+@use 'functions';
+
+
+body{
+    font-family: variables.$primary-font-size;
+}
