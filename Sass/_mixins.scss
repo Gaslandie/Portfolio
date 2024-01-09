@@ -51,7 +51,6 @@
 //dark mode
 @mixin box-hover-dark-mode{
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
     &:hover{
         background-color: rgb(4, 66, 104);
     }
@@ -60,9 +59,17 @@
 //light mode
 @mixin box-hover-light-mode{
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
   &:hover{
   background-color: beige;
   }
 }
 
+//mixin pour disposition de notre footer
+
+@mixin display-footer{
+  margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

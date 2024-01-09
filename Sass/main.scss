@@ -10,14 +10,21 @@
 
 //notre page en mode sombre
 body.dark-theme{
+    padding-top:68px;
     background: variables.$dark-theme-background;
     color:variables.$dark-theme-text;
     font-family: variables.$primary-font;
     //barre de navigation pour theme sombre
     .container nav{
-    @include mixins.nav-bar; //quelque soit le theme
-    @include mixins.box-hover-dark-mode;
-    ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: variables.$dark-theme-background;
+        @include mixins.nav-bar; //quelque soit le theme
+        @include mixins.box-hover-dark-mode;
+        ul{
         @include mixins.list-style; //quelque soit le theme
         width:70%;
         a{
@@ -25,7 +32,16 @@ body.dark-theme{
         }
     }
    }
+   //footer dark theme
+   footer{
+    @include mixins.display-footer;
+    width: 100%;
+    a{
+        @include mixins.dark-link-style
+    }
+   }
   }
+
 
   //notre page en mode eclairé
   body.light-theme{
@@ -33,6 +49,12 @@ body.dark-theme{
     color: variables.$light-theme-text;
     font-family: variables.$primary-font;
     .container nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: variables.$light-theme-background;
         @include mixins.nav-bar; //quelque soit le theme
         @include mixins.box-hover-light-mode;
         ul{
@@ -43,7 +65,16 @@ body.dark-theme{
             }
         }
        }
+       //footer light theme
+       footer{
+        @include mixins.display-footer;
+        width: 100%;
+        a{
+            @include mixins.light-link-style
+        }
+       }
 }
+
 
 
 //le bouton icon pour changer le theme de la page
@@ -79,3 +110,12 @@ body.dark-theme{
         }
     }
 }
+
+//disposition de notre about me
+.about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
