@@ -2,6 +2,13 @@
 @use 'mixins';
 @use 'functions';
 
+  //rendre flexible notre boite principale
+  .container{
+    display: flex;
+    flex-direction: column;
+}
+
+//notre page en mode sombre
 body.dark-theme{
     background: variables.$dark-theme-background;
     color:variables.$dark-theme-text;
@@ -9,9 +16,10 @@ body.dark-theme{
     //barre de navigation pour theme sombre
     .container nav{
     @include mixins.nav-bar; //quelque soit le theme
+    @include mixins.box-hover-dark-mode;
     ul{
         @include mixins.list-style; //quelque soit le theme
-        width:80%;
+        width:70%;
         a{
             @include mixins.dark-link-style;
         }
@@ -19,28 +27,23 @@ body.dark-theme{
    }
   }
 
+  //notre page en mode eclairé
   body.light-theme{
     background: variables.$light-theme-background;
     color: variables.$light-theme-text;
     font-family: variables.$primary-font;
     .container nav{
         @include mixins.nav-bar; //quelque soit le theme
+        @include mixins.box-hover-light-mode;
         ul{
             @include mixins.list-style; //quelque soit le theme
-            width:80%;
+            width:70%;
             a{
                 @include mixins.light-link-style;
             }
         }
        }
 }
-
-  //rendre flexible notre boite principale
-.container{
-    display: flex;
-    flex-direction: column;
-}
-
 
 
 //le bouton icon pour changer le theme de la page

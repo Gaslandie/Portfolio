@@ -39,10 +39,30 @@
   color: variables.$light-theme-link;
   transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
 
-  &:hover, &:focus {
+  &:hover {
     background-color: variables.$light-theme-link-hover-bg; // Fond au survol
     color: variables.$light-theme-link-hover; // Couleur de texte au survol
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // Ombre portée plus légère
+  }
+}
+
+//quand on survole une boite,ou une section sur notre page
+
+//dark mode
+@mixin box-hover-dark-mode{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    &:hover{
+        background-color: rgb(4, 66, 104);
+    }
+}
+
+//light mode
+@mixin box-hover-light-mode{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  &:hover{
+  background-color: beige;
   }
 }
 

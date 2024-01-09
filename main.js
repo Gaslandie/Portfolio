@@ -1,3 +1,6 @@
+//Barre de navigation
+
+//changement de theme sur notre page
 const themeToggleButton = document.getElementById('theme-toggle');
 const body = document.body;
 
