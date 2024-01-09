@@ -41,13 +41,13 @@ body.dark-theme .container nav ul a {
 body.dark-theme .container nav ul a:hover {
   background-color: rgba(0, 188, 212, 0.2);
   color: #B2EBF2;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
 }
 body.dark-theme footer {
   margin: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
@@ -61,7 +61,7 @@ body.dark-theme footer a {
 body.dark-theme footer a:hover {
   background-color: rgba(0, 188, 212, 0.2);
   color: #B2EBF2;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
 body.light-theme {
@@ -101,13 +101,13 @@ body.light-theme .container nav ul a {
 body.light-theme .container nav ul a:hover {
   background-color: rgba(0, 0, 0, 0.1);
   color: #666;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.2);
 }
 body.light-theme footer {
   margin: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
@@ -121,7 +121,7 @@ body.light-theme footer a {
 body.light-theme footer a:hover {
   background-color: rgba(0, 0, 0, 0.1);
   color: #666;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.2);
 }
 
 #theme-toggle {
@@ -154,8 +154,43 @@ body.light-theme footer a:hover {
 
 .about-me {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.about-me .presentation {
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-me .presentation:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.about-me img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-me img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 700px) {
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .about-me .presentation {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.mes-projets {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
 }
 

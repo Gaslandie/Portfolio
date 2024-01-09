@@ -111,11 +111,48 @@ body.dark-theme{
     }
 }
 
-//disposition de notre about me
+//style  de notre about me
+
 .about-me{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     text-align: center;
+    .presentation{
+        width: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+        &:hover {
+            transform: scale(1.05); // Légère augmentation de taille
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Ombre plus prononcée
+        }
+    }
+    //style de notre image
+    img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+        &:hover {
+            transform: scale(1.05); // Légère augmentation de taille
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Ombre plus prononcée
+        }
+    }
+    //pour les ecran de moins de 700px ,aligner verticalement
+    @media (max-width:700px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        .presentation{
+            width:100%;
+            margin-bottom: 20px;
+        }
+    }
 }
 
+.mes-projets{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
