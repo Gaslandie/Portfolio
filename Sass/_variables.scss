@@ -1,34 +1,26 @@
 //font montserrat pour nnotre page
-$primary-font: 'Montserrat', sans-serif;
-$margin-top: 100px;
+$primary-font:'Montserrat', sans-serif;
 
 
-//variables theme sombre
-$dark-theme-background: #1A237E;
-$dark-theme-text: #E0E0E0;
-$dark-theme-link: #00BCD4;
-$dark-theme-link-hover: #B2EBF2;
-$dark-theme-link-hover-bg: rgba(0, 188, 212, 0.2); // Un bleu cyan plus clair avec transparence
+// Thème Sombre 
+$dark-theme-background: #102027;
+$dark-theme-text: #CFD8DC;
+$dark-theme-link: #FFAB91;
+$dark-theme-link-hover: #FF8A65;
+$dark-theme-link-hover-bg: rgba(255, 171, 145, 0.2);
+//pour notre icon de changement de theme
+$icon-color-dark-theme: #FF6E40;
+$icon-hover-background-dark-theme: rgba(255, 110, 64, 0.25);
+$icon-hover-color-dark-theme: #000;
 
-
-
-
-// variables pour le thème clair
-$light-theme-background: rgb(236, 236, 222);
-$light-theme-text: #000;
-$light-theme-link: #000;
-$light-theme-link-hover: #666;
-$light-theme-link-hover-bg: rgba(0, 0, 0, 0.1);
-
-
-//button theme change et icon dark theme
-$icon-color-dark-theme: #1e1212; // Couleur de base de l'icône
-$icon-hover-background-dark-theme: rgba(255, 255, 255, 0.2); // Fond de l'icône au survol
-$icon-hover-color-dark-theme: #000; // Couleur de l'icône au survol
-
-
-//button theme change light theme
-$icon-color-light-theme: #000; // Couleur de base de l'icône pour le thème clair
-$icon-hover-background-light-theme: rgba(0, 0, 0, 0.2); // Fond de l'icône au survol pour le thème clair
-$icon-hover-color-light-theme: #fff; // Couleur de l'icône au survol pour le thème clair
+// Thème Clair 
+$light-theme-background: #FFF3E0;
+$light-theme-text: #5D4037;
+$light-theme-link: #8D6E63;
+$light-theme-link-hover: #A1887F;
+$light-theme-link-hover-bg: rgba(141, 110, 99, 0.1);
+//theme clair pour notre icon de changement de theme
+$icon-color-light-theme: #6D4C41;
+$icon-hover-background-light-theme: rgba(109, 76, 65, 0.2);
+$icon-hover-color-light-theme: #fff;
 
