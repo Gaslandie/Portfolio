@@ -8,7 +8,7 @@
   justify-content: space-evenly;
 }
 
-//quelque soit le theme nav bar disposition
+//quelque soit le theme nav bar
 @mixin nav-bar{
     display: flex;
     flex-direction: row;
@@ -60,7 +60,7 @@
 @mixin box-hover-light-mode{
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   &:hover{
-  background-color: beige;
+  background-color: whitesmoke;
   }
 }
 
@@ -68,8 +68,24 @@
 
 @mixin display-footer{
   margin: 0;
+  margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+//mixin pour petit ecran 
+@mixin query-petit-ecran{
+  @media (max-width:700px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    .presentation{
+      width: 100%;
+      margin-bottom: 50px;
+    }
+}
 }

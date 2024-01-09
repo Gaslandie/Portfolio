@@ -7,10 +7,13 @@
     display: flex;
     flex-direction: column;
 }
+body{
+    @include mixins.query-petit-ecran;
+}
 
 //notre page en mode sombre
 body.dark-theme{
-    padding-top:68px;
+    padding-top:200px;
     background: variables.$dark-theme-background;
     color:variables.$dark-theme-text;
     font-family: variables.$primary-font;
@@ -32,19 +35,28 @@ body.dark-theme{
         }
     }
    }
+   .presentation,.presentation-projet, .projets-listes div {
+    @include mixins.box-hover-dark-mode;
+    a{
+        @include mixins.dark-link-style;
+        margin-bottom: 10px;
+    }
+   }
    //footer dark theme
    footer{
     @include mixins.display-footer;
     width: 100%;
     a{
-        @include mixins.dark-link-style
+        @include mixins.dark-link-style;
     }
    }
+
   }
 
 
   //notre page en mode eclairé
   body.light-theme{
+    padding-top:200px;
     background: variables.$light-theme-background;
     color: variables.$light-theme-text;
     font-family: variables.$primary-font;
@@ -72,6 +84,14 @@ body.dark-theme{
         a{
             @include mixins.light-link-style
         }
+       }
+       .presentation,.presentation-projet, .projets-listes div {
+        @include mixins.box-hover-light-mode;
+        a{
+            @include mixins.light-link-style;
+            margin-bottom: 10px;
+        }
+        
        }
 }
 
@@ -120,6 +140,7 @@ body.dark-theme{
     text-align: center;
     .presentation{
         width: 50%;
+        // margin-left: 30px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     
@@ -130,6 +151,7 @@ body.dark-theme{
     }
     //style de notre image
     img {
+        // margin-right: 30px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     
@@ -139,20 +161,45 @@ body.dark-theme{
         }
     }
     //pour les ecran de moins de 700px ,aligner verticalement
-    @media (max-width:700px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        .presentation{
-            width:100%;
-            margin-bottom: 20px;
-        }
-    }
+    @include mixins.query-petit-ecran;
 }
 
 .mes-projets{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
+    margin-top: 100px;
+    .presentation-projet{
+        // width: 80%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 10px 30px;
+        &:hover {
+            transform: scale(1.05); // Légère augmentation de taille
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Ombre plus prononcée
+        }
+    }
+    //pour la liste de nos projets,une fois plus de projets penser à utiliser grid
+    .projets-listes{
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+        margin-top: 100px;
+
+        .projet-cours-youtube,.projet-portfolio{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px 30px;
+            &:hover {
+                transform: scale(1.05); // Légère augmentation de taille
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Ombre plus prononcée
+            }
+        }
+        @include mixins.query-petit-ecran;
+        ul{
+            list-style: none;
+        }
+    }
 }

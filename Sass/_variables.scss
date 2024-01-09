@@ -1,5 +1,6 @@
 //font montserrat pour nnotre page
 $primary-font: 'Montserrat', sans-serif;
+$margin-top: 100px;
 
 
 //variables theme sombre
@@ -13,7 +14,7 @@ $dark-theme-link-hover-bg: rgba(0, 188, 212, 0.2); // Un bleu cyan plus clair av
 
 
 // variables pour le thème clair
-$light-theme-background: #fff;
+$light-theme-background: rgb(236, 236, 222);
 $light-theme-text: #000;
 $light-theme-link: #000;
 $light-theme-link-hover: #666;
