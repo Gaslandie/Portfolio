@@ -8,9 +8,15 @@
     flex-direction: column;
 }
 
+.navbar {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
 //notre page en mode sombre
 body.dark-theme{
-    padding-top:200px;
+    // padding-top:200px;
     background: variables.$dark-theme-background;
     color:variables.$dark-theme-text;
     font-family: variables.$primary-font;
@@ -22,6 +28,7 @@ body.dark-theme{
         width: 100%;
         z-index: 1000;
         background: variables.$dark-theme-background;
+
         @include mixins.nav-bar; //quelque soit le theme
         @include mixins.box-hover-dark-mode;
         ul{
@@ -31,6 +38,11 @@ body.dark-theme{
             @include mixins.dark-link-style;
         }
     }
+   }
+   .transition{
+    height: 100vh;
+    overflow: hidden;
+    transition: height 0.5s ease;
    }
    .presentation,.presentation-projet, .projets-listes div {
     @include mixins.box-hover-dark-mode;
@@ -53,7 +65,7 @@ body.dark-theme{
 
   //notre page en mode eclairé
   body.light-theme{
-    padding-top:200px;
+    // padding-top:200px;
     background: variables.$light-theme-background;
     color: variables.$light-theme-text;
     font-family: variables.$primary-font;

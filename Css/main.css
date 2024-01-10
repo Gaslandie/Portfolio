@@ -3,8 +3,13 @@
   flex-direction: column;
 }
 
+.navbar {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
 body.dark-theme {
-  padding-top: 200px;
   background: #102027;
   color: #CFD8DC;
   font-family: "Montserrat", sans-serif;
@@ -39,6 +44,11 @@ body.dark-theme .container nav ul a:hover {
   background-color: rgba(255, 171, 145, 0.2);
   color: #FF8A65;
   box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
+}
+body.dark-theme .transition {
+  height: 100vh;
+  overflow: hidden;
+  transition: height 0.5s ease;
 }
 body.dark-theme .presentation, body.dark-theme .presentation-projet, body.dark-theme .projets-listes div {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -79,7 +89,6 @@ body.dark-theme footer a:hover {
 }
 
 body.light-theme {
-  padding-top: 200px;
   background: #FFF3E0;
   color: #5D4037;
   font-family: "Montserrat", sans-serif;
