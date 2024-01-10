@@ -36,8 +36,8 @@
         <section class="about-me">
             <!-- presentation -->
             <div class="presentation">
-                <h1>Gassama Mohamed</h1>
-                <p>Diplômé en mathématiques avec un parcours complémentaire en développement web et certifié en data science par IBM, je suis un passionné de programmation et de solutions technologiques. Ma formation autodidacte et mon expérience académique m'ont doté d'une solide base en analyse et en résolution de problèmes. Actuellement à la recherche d'opportunités dans le développement web, je suis motivé à contribuer à des projets innovants et à collaborer au sein d'équipes dynamiques.</p>
+                <h1 id="typed-heading"></h1>
+                <p id="typed-text">Diplômé en mathématiques avec un parcours complémentaire en développement web et certifié en data science par IBM, je suis un passionné de programmation et de solutions technologiques. Ma formation autodidacte et mon expérience académique m'ont doté d'une solide base en analyse et en résolution de problèmes. Actuellement à la recherche d'opportunités dans le développement web, je suis motivé à contribuer à des projets innovants et à collaborer au sein d'équipes dynamiques.</p>
             </div>
             <!-- ma photo -->
             <img src="img/ma-photo.jpg" alt="photo de Gassama Mohamed">
@@ -54,24 +54,32 @@
                 <p>Voici une sélection de projets sur lesquels j'ai travaillé, illustrant mes compétences en développement web et programmation</p>
             </div>
             <!--fin  titre de section projet et certificats -->
+
+            <!-- boutons de filtrage -->
+            <div class="filtres">
+                <button class="filter-btn" data-filter="tout">Tout</button>
+                <button class="filter-btn" data-filter="projet">Projets</button>
+                <button class="filter-btn" data-filter="certificat">Certificats</button>
+            </div>
+            <!-- fin boutons de filtrage -->
             
             <div class="projets-listes">
                    <!-- projet de cours en ligne youtube -->
-               <div class="projet-cours-youtube">
+               <div class="projet">
                    <h3>Cours Vidéo sur YouTube</h3>
                    <p>Découvrez ma série de tutoriels sur le développement web sur YouTube.</p>
                    <iframe width="150px" height="150px" src="https://www.youtube.com/embed/LWAikYXiOpw?si=tm2UjeqPBS2VTOwc&amp;start=6160" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                </div>
 
                <!-- certificat google data -->
-               <div class="certificat-google-data">
+               <div class="certificat">
                    <h3>Google Data Analytics</h3>
                    <p>Certifié en Google Data Analytics, je maîtrise l'analyse et la visualisation de données, permettant d'extraire des insights essentiels pour des décisions stratégiques. Cette formation a renforcé mes compétences en outils analytiques et en communication de données..</p>
                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/3HTKNXXF3XVV" target="_blank">Certificat</a>
                </div>
 
                <!-- Certificat IBM data science avec python -->
-               <div class="certificat-data-science-python">
+               <div class="certificat">
                 <h3>IBM python Data Science</h3>
                 <p>Avec ma certification en Data Sciences d'IBM, j'ai acquis des compétences avancées en statistiques, machine learning, et analyse de données. Cette formation complète m'a équipé pour gérer et interpréter des ensembles de données complexes, et pour fournir des analyses percutantes et des solutions basées sur des données.</p>
                 
