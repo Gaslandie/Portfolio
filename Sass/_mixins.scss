@@ -23,11 +23,11 @@
   text-decoration: none;
   color:variables.$dark-theme-link;
   transition: background-color 0.5s ease, color 0.5s ease;
-  // box-shadow: 1px 1px 2px ;
+  // box-shadow: 1px 1px 20px ;
   &:hover{
     background-color: variables.$dark-theme-link-hover-bg;
     color: variables.$dark-theme-link-hover;
-    box-shadow: 10px 20px 20px  rgba(0, 0, 0, 0.3); // Ajout de l'ombre portée
+    box-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.3); // Ajout de l'ombre portée
   }
 }
 
@@ -39,11 +39,11 @@
   text-decoration: none;
   color: variables.$light-theme-link;
   transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
-
+  // box-shadow: 1px 1px 20px ;
   &:hover {
     background-color: variables.$light-theme-link-hover-bg; // Fond au survol
     color: variables.$light-theme-link-hover; // Couleur de texte au survol
-    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.2); // Ombre portée plus légère
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); // Ombre portée plus légère
   }
 }
 
@@ -51,7 +51,7 @@
 
 //dark mode
 @mixin box-hover-dark-mode{
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
     // &:hover{
     //     background-color: rgb(4, 66, 104);
     // }
@@ -59,7 +59,7 @@
 
 //light mode
 @mixin box-hover-light-mode{
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   // &:hover{
   // background-color: whitesmoke;
   // }
