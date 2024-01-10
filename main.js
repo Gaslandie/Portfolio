@@ -11,7 +11,7 @@ themeToggleButton.addEventListener('click', () => {
     themeToggleButton.innerHTML = isLightTheme ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
 });
 
-//effet de transition sur les element de notre page, à part la navbar
+//effet de transition sur les element de notre page vers le haut
 document.addEventListener("DOMContentLoaded",function () {
     setTimeout(function(){
         var transitionDiv = document.querySelector(".transition");
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded",function () {
     }, 1800); // Délai de 1000 millisecondes (1 seconde)
 });
 
-
+//filtrage projet et certificat
 document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const allItems = document.querySelectorAll('.projets-listes > div');
@@ -86,7 +86,7 @@ window.addEventListener('scroll', function () {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const scrollY = window.scrollY;
 
-    if (scrollY > 400) { // Par exemple, faites apparaître les boutons après avoir fait défiler de 200 pixels vers le bas
+    if (scrollY > 200) { // Par exemple, faites apparaître les boutons après avoir fait défiler de 200 pixels vers le bas
         filterButtons.forEach((button, index) => {
             button.style.right = `${index * 100}px`; // Positionnez les boutons en ligne en ajustant le 'right'
             

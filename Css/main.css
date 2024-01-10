@@ -95,7 +95,7 @@ body.dark-theme .presentation a:hover, body.dark-theme .presentation-projet a:ho
 }
 body.dark-theme footer {
   margin: 0;
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -152,7 +152,7 @@ body.light-theme .container nav ul a:hover {
 }
 body.light-theme footer {
   margin: 0;
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
