@@ -52,17 +52,17 @@
 //dark mode
 @mixin box-hover-dark-mode{
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    // &:hover{
-    //     background-color: rgb(4, 66, 104);
-    // }
+    &:hover{
+        background-color: #142b35;
+    }
 }
 
 //light mode
 @mixin box-hover-light-mode{
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  // &:hover{
-  // background-color: whitesmoke;
-  // }
+  &:hover{
+  background-color: variables.$light-theme-link-hover-bg;
+  }
 }
 
 //mixin pour disposition de notre footer
@@ -70,10 +70,13 @@
 @mixin display-footer{
   margin: 0;
   margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  @media (max-width:700px) {
+    font-size: 0.8rem;
+  }
 }
 
 //mixin pour petit ecran 

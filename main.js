@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded",function () {
         var navbar = document.querySelector(".navbar");
 
         //Reduire la hauteur de la div .transition à 0
-        transitionDiv.style.height="200px";
+        transitionDiv.style.height="80px";
 
     },1000)
   })
@@ -33,23 +33,24 @@ document.addEventListener("DOMContentLoaded",function () {
 
 //filtrage projet et certificat
 document.addEventListener('DOMContentLoaded', function () {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const allItems = document.querySelectorAll('.projets-listes > div');
+
+    const filterButtons = document.querySelectorAll('.filter-btn'); //on recupere nos filter btn sur les quel cliquer nous filtrera
+    const allItems = document.querySelectorAll('.projets-listes > div');//on recupere nos projets et certificats
 
     filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filter = btn.getAttribute('data-filter');
+        btn.addEventListener('click', () => { 
 
-            allItems.forEach(item => {
-                if (filter === 'tout') {
-                    item.style.display = 'block';
+            const filter = btn.getAttribute('data-filter'); //recuperer la valeur de l'attribut data-filter qui est cliqué
+            allItems.forEach(item => { //pour chaque projet ou certificat
+                if (filter === 'tout') { //si on clique sur le boutton tout
+                    item.style.display = 'block';//on affiche tous les items en block
                 } else {
-                    if (item.classList.contains(filter)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                }
+                         if (item.classList.contains(filter)) { //sinon afficher les elements qui ont la meme classe que le button cliqué
+                            item.style.display = 'block';
+                         } else {
+                            item.style.display = 'none';
+                         }
+                       }
             });
         });
     });
@@ -86,7 +87,7 @@ window.addEventListener('scroll', function () {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const scrollY = window.scrollY;
 
-    if (scrollY > 200) { // Par exemple, faites apparaître les boutons après avoir fait défiler de 200 pixels vers le bas
+    if (scrollY > 180) { // Par exemple, faites apparaître les boutons après avoir fait défiler de 200 pixels vers le bas
         filterButtons.forEach((button, index) => {
             button.style.right = `${index * 100}px`; // Positionnez les boutons en ligne en ajustant le 'right'
             
