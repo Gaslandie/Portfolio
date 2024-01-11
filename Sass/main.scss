@@ -85,7 +85,7 @@ body.dark-theme{
 
    
    .presentation,.presentation-projet, .projets-listes div {
-    @include mixins.box-hover-dark-mode;
+    // @include mixins.box-hover-dark-mode;
     a{
         @include mixins.dark-link-style;
         margin-bottom: 10px;
@@ -140,7 +140,7 @@ body.dark-theme{
         }
        }
        .presentation,.presentation-projet, .projets-listes div {
-        @include mixins.box-hover-light-mode;
+        // @include mixins.box-hover-light-mode;
         a{
             @include mixins.light-link-style;
             margin-bottom: 10px;

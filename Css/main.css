@@ -79,12 +79,6 @@ body.dark-theme .container nav ul a:hover {
   color: #FF8A65;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-body.dark-theme .presentation, body.dark-theme .presentation-projet, body.dark-theme .projets-listes div {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-}
-body.dark-theme .presentation:hover, body.dark-theme .presentation-projet:hover, body.dark-theme .projets-listes div:hover {
-  background-color: #142b35;
-}
 body.dark-theme .presentation a, body.dark-theme .presentation-projet a, body.dark-theme .projets-listes div a {
   display: inline-block;
   padding: 0.5rem;
@@ -185,12 +179,6 @@ body.light-theme footer a:hover {
   background-color: rgba(141, 110, 99, 0.1);
   color: #A1887F;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
-body.light-theme .presentation, body.light-theme .presentation-projet, body.light-theme .projets-listes div {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-}
-body.light-theme .presentation:hover, body.light-theme .presentation-projet:hover, body.light-theme .projets-listes div:hover {
-  background-color: rgba(141, 110, 99, 0.1);
 }
 body.light-theme .presentation a, body.light-theme .presentation-projet a, body.light-theme .projets-listes div a {
   display: inline-block;
