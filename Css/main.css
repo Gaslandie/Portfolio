@@ -79,7 +79,10 @@ body.dark-theme .container nav ul a:hover {
   color: #FF8A65;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-body.dark-theme .presentation a, body.dark-theme .presentation-projet a, body.dark-theme .projets-listes div a {
+body.dark-theme .projets-listes div {
+  position: relative;
+}
+body.dark-theme .projets-listes div a {
   display: inline-block;
   padding: 0.5rem;
   text-decoration: none;
@@ -87,7 +90,7 @@ body.dark-theme .presentation a, body.dark-theme .presentation-projet a, body.da
   transition: background-color 0.5s ease, color 0.5s ease;
   margin-bottom: 10px;
 }
-body.dark-theme .presentation a:hover, body.dark-theme .presentation-projet a:hover, body.dark-theme .projets-listes div a:hover {
+body.dark-theme .projets-listes div a:hover {
   background-color: rgba(255, 171, 145, 0.2);
   color: #FF8A65;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
@@ -283,7 +286,9 @@ body.light-theme .presentation a:hover, body.light-theme .presentation-projet a:
   }
 }
 .mes-projets .projets-listes div {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 10px;
@@ -296,6 +301,12 @@ body.light-theme .presentation a:hover, body.light-theme .presentation-projet a:
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
+}
+.mes-projets .projets-listes div a {
+  margin: 0 30%;
+}
+.mes-projets .projets-listes div iframe {
+  align-self: center;
 }
 @media (max-width: 700px) {
   .mes-projets .projets-listes {

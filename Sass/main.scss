@@ -84,8 +84,9 @@ body.dark-theme{
    }
 
    
-   .presentation,.presentation-projet, .projets-listes div {
+   .projets-listes div {
     // @include mixins.box-hover-dark-mode;
+    position:relative;
     a{
         @include mixins.dark-link-style;
         margin-bottom: 10px;
@@ -255,11 +256,12 @@ body.dark-theme{
         }
 
         div{
-            position: relative;
+            // position: relative;
             // padding-bottom: 25px;
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: ;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between ;
+            // align-items: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             // margin:30px;
@@ -270,6 +272,12 @@ body.dark-theme{
             }
             ul{
                 @include mixins.list-style;
+            }
+            a{
+                margin: 0 30%;
+            }
+            iframe{
+                align-self: center;
             }
            
         }
