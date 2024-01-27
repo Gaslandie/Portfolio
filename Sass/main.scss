@@ -256,11 +256,11 @@ body.dark-theme{
         }
 
         div{
-            // position: relative;
+            position: relative;
             // padding-bottom: 25px;
             display: flex;
             flex-direction: column;
-            justify-content:space-between ;
+            justify-content:space-between;
             // align-items: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -274,7 +274,10 @@ body.dark-theme{
                 @include mixins.list-style;
             }
             a{
+                // position: absolute;
+                // bottom: 10px;
                 margin: 0 30%;
+                // margin-top: 50px;
             }
             iframe{
                 align-self: center;
