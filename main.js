@@ -15,7 +15,6 @@ themeToggleButton.addEventListener('click', () => {
 document.addEventListener("DOMContentLoaded",function () {
     setTimeout(function(){
         var transitionDiv = document.querySelector(".transition");
-        var navbar = document.querySelector(".navbar");
 
         //Reduire la hauteur de la div .transition à 0
         transitionDiv.style.height="80px";
